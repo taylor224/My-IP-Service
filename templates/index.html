@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ipify Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background: linear-gradient(162.05deg, rgba(255, 255, 255, 0) 33.81%, rgb(226, 223, 255) 64.44%, rgb(138, 185, 255) 112.22%) !important;
+        }
+
+        .card {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            border: none;
+            display: flex;
+            height: 100%;
+            background: none;
+        }
+
+        .card-pretty {
+            background: white;
+            padding-top: 1.3rem;
+            box-shadow: rgba(25, 62, 88, 0.15) 0px 4px 15px;
+            border-radius: 20px;
+        }
+
+        .title {
+            color: #424242;
+            font-size: 1.3rem;
+            padding-top: 5px !important;
+            padding-bottom: 40px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="row card-pretty">
+            <div class="col-md-12">
+                <h5 class="text-center py-4 px-4 px-sm-5 m-0 title">My IP Service</h5>
+                <div class="px-4 px-sm-5 pt-1 pb-5">
+                    <p>Your IP is</p>
+                    <input id="data-copy" class="form-control" type="text" value="{{ client_ip }}" disabled />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

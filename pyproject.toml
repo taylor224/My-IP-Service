@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "MIS"
+version = "0.0.1"
+description = "Simple IP show Service"
+authors = ["Taylor <taylor@kloa.kr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "3.0.2"
+werkzeug = "3.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
