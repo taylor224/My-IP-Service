@@ -1,4 +1,4 @@
-FROM python:3.12-bookworm
+FROM python:3.15.2-bookworm
 
 ARG USERNAME=server
 ARG USER_UID=1000
@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN apt-get update && \
+RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y build-essential libpcre3-dev && \
     apt-get clean;
 
@@ -20,7 +20,7 @@ RUN pip install poetry uwsgi
 ADD poetry.lock .
 ADD pyproject.toml .
 
-RUN poetry config virtualenvs.create false && poetry install --no-dev --no-interaction --no-ansi --no-root
+RUN poetry config virtualenvs.create false && poetry install --only main --no-interaction --no-ansi --no-root
 
 COPY . .
 
